@@ -1,0 +1,33 @@
+
+
+<body>
+<div class="container">
+    <h2>Sign Up</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="user.name" >
+        </div>
+    
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" [(ngModel)]="user.phoneNumber">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="user.email">
+        </div>
+        <div class="form-group">
+            <label for="password">password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="user.password">
+        </div>
+        <div class="form-group">
+            <button class="btn"  (click)="signup(user)">Submit</button><br><br>
+        </div>
+    </form>
+    <a routerLink="/">Already Have</a>
+
+</div>
+
+</body>
+

@@ -1,0 +1,8 @@
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image-container {
+    margin: 10px; /* Adjust the margin between images */
+  }

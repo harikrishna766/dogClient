@@ -1,0 +1,17 @@
+
+<div class="container">
+<div class="login-box">
+  <h2>Login</h2>
+  <form>
+    <div class="textbox">
+        <input type="email" placeholder="Email" name="username" [(ngModel)]="user.email">
+      </div>
+      <div class="textbox">
+        <input type="password" placeholder="Password" name="password" [(ngModel)]="user.password">
+      </div>
+      <button class="btn"(click)="login(user)">Login</button><br><br>
+    </form>
+    <a routerLink="/sign">Signup</a>
+</div>
+</div>
+
