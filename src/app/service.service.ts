@@ -23,4 +23,12 @@ export class ServiceService {
     console.log(localStorage.getItem('result')  );
     return localStorage.getItem('result');
   }
+  addDog(data: any) {
+    let url = 'http://localhost:4050/api/v1/user/adddog';
+    return this.http.post(url, data);
+  }
+  getdog() {
+    let url = 'http://localhost:4050/api/v1/user/getallDog';
+    return this.http.post(url,'data');
+  }
 }

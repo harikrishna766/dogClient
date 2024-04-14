@@ -1,0 +1,52 @@
+<div>
+
+  <div class="navbar">
+      <div class="navbar-container">
+          <div class="logo">Paws Partner</div>
+      </div>
+      <div class="nav-links">
+          <a routerLink="/Accessories">Accessories</a>
+         <a (click)="navigateTobuydog()">Buy Dog</a>
+          <a (click)="navigateToAdddog()">Add Dog</a>
+          <a routerLink="/bites">Barky Bites</a>
+          <button (click)="logout()">Logout</button>
+      </div>
+
+  </div>
+  <div >
+<head>
+</head>
+<body>
+
+<!-- <div class="card">
+  <img src="https://via.placeholder.com/300" alt="Product Image">
+  <div class="content">
+    <div class="title">Product Title</div>
+    <div class="description">Product Description</div>
+    <div class="buttons">
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="buy-now">Buy Now</button>
+    </div>
+  </div>
+</div> -->
+<div *ngFor="let product of result" class="card">
+  <img [src]="image+product.imagePath" alt="Product Image">
+  <div class="content">
+    <label style="color: red;">Price :
+      {{ product.price }}$</label><br>
+    <label style="color: red;"> Breed : {{ product.breed }}</label>
+    <div class="buttons">
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="buy-now">Buy Now</button>
+    </div>
+  </div>
+ </div>
+
+</body>
+
+  </div>
+
+
+  </div>
+
+

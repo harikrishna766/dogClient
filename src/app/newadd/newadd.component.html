@@ -1,0 +1,43 @@
+<div>
+
+  <div class="navbar">
+      <div class="navbar-container">
+          <div class="logo">Paws Partner</div>
+      </div>
+      <div class="nav-links">
+          <a routerLink="/Accessories">Accessories</a>
+         <a (click)="navigateTobuydog()" style="cursor: pointer;">Buy Dog</a>
+          <a (click)="navigateToAdddog()" style="cursor: pointer;">Add Dog</a>
+          <a routerLink="/bites">Barky Bites</a>
+          <button (click)="logout()">Logout</button>
+      </div>
+
+  </div>
+  <div class="constainer" style="width: 400px;margin-left: 500px;">
+    <h1 style="text-align: center;color:red">AddDog</h1>
+      <div>
+        <label for="fileInput">Choose a file:</label>
+        <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*">
+      </div>
+      <div>
+        <label for="priceInput">Price:</label>
+        <input type="number" id="priceInput" name="price" [(ngModel)]="data.price" [ngModelOptions]="{standalone: true}"
+       required >
+      </div>
+      <div>
+        <label class="form-label" for="breedInput">Breed:</label>
+        <input type="text" id="breedInput" class="form-control"  name="breed" [(ngModel)]="data.breed" required >
+      </div>
+      <button type="submit" (click)="submitForm(data)">Upload+</button>
+
+  </div>
+
+  <!-- <main>
+      <a href="back.html"></a>
+  </main> -->
+  <!-- <img src="/dogClient/src/assets/image.jpeg"> -->
+
+  </div>
+
+
+
