@@ -52,6 +52,7 @@
   overflow: hidden;
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  float: left;
 }
 
 /* Card Image */
@@ -61,26 +62,22 @@
   object-fit: cover;
 }
 
-/* Card Content */
 .card .content {
   padding: 20px;
 }
 
-/* Card Title */
 .card .title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* Button Container */
 .card .buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-/* Button Style */
 .card .buttons button {
   padding: 10px 20px;
   border: none;
@@ -89,19 +86,59 @@
   transition: background-color 0.3s ease;
 }
 
-/* Add to Cart Button */
 .card .buttons .add-to-cart {
   background-color: #4CAF50;
   color: white;
 }
 
-/* Buy Now Button */
 .card .buttons .buy-now {
   background-color: #f44336;
   color: white;
 }
 
-/* Hover Effect */
+
 .card .buttons button:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  width: 100px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: not-allowed;
+}
+.buttons {
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons */
+}
+
+.btn {
+  cursor: pointer;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-add-cart {
+  background-color: orange;
+}
+
+.btn-confirm-buy {
+  background-color: rgb(195, 195, 79);
+}
+
+.btn-modify{
+  background-color: yellowgreen;
 }

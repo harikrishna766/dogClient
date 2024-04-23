@@ -1,0 +1,23 @@
+<div class="head">
+  <h1 style="text-align: center;color: blue;background-color: aquamarine;">cartDetails</h1>
+</div>
+<div *ngFor="let product of result ;let a=index" class="card">
+
+  <img [src]="image+product.imagePath" alt="Product Image">
+  <div class="content">
+      <label style="color: rgb(143, 144, 187);">ProductNumber: {{ a + 1 }}</label><br>
+
+ <label style="color: red;">Price :{{ product.price }}$</label>
+    <div class="input-group">
+      <label style="color: red;"> Breed : {{ product.breed }}</label>
+
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-cancel" style="background-color:orange" (click)="cancel()">Back</button>
+      <button class="btn btn-delete" style="background-color: red" (click)="delete()">Delete</button>
+
+
+    </div>
+  </div>
+ </div>

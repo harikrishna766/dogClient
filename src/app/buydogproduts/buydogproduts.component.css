@@ -1,0 +1,83 @@
+.center-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Adjust width as needed */
+  background-color: rgb(173, 236, 236);
+
+}
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.content {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.label {
+  color: red;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  background-color: green;
+  color: white;
+}
+
+/* .btn
+{
+  background-color:red;
+  cursor: pointer;
+  padding: 20px;
+} */
+.buttons {
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons */
+}
+
+.btn {
+  cursor: pointer;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-add-cart {
+  background-color: orange;
+}
+
+.btn-confirm-buy {
+  background-color: green;
+}
+
+.btn-cancel {
+  background-color: red;
+}
+

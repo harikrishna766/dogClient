@@ -4,16 +4,19 @@
       <div class="navbar-container">
           <div class="logo">Paws Partner</div>
       </div>
-      <div class="nav-links">
-          <a routerLink="/Accessories">Accessories</a>
-         <a (click)="navigateTobuydog()" style="cursor: pointer;">Buy Dog</a>
-          <a (click)="navigateToAdddog()" style="cursor: pointer;">Add Dog</a>
+      <div class="nav-links" style="cursor: pointer;">
+          <a (click)="Accessories()">Accessories</a>
+         <a (click)="navigateTobuydog()" >Buy Dog</a>
+          <a (click)="navigateToAdddog()" >Add Dog</a>
           <a routerLink="/bites">Barky Bites</a>
           <button (click)="logout()">Logout</button>
       </div>
 
   </div>
-  <div class="constainer" style="width: 400px;margin-left: 500px;">
+
+
+
+  <!-- <div class="constainer" style="width: 400px;margin-left: 500px;">
     <h1 style="text-align: center;color:red">AddDog</h1>
       <div>
         <label for="fileInput">Choose a file:</label>
@@ -30,6 +33,44 @@
       </div>
       <button type="submit" (click)="submitForm(data)">Upload+</button>
 
+  </div> -->
+
+
+
+
+
+
+
+
+  <div class="container">
+    <h1 class="heading">Add Dog</h1>
+    <form>
+      <div class="form-group">
+        <label for="fileInput">Choose a file:</label>
+        <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*">
+      </div>
+      <div class="form-group">
+        <label for="priceInput">Price:</label>
+        <input type="number" id="priceInput" name="price" [(ngModel)]="data.price" [ngModelOptions]="{standalone: true}" required>
+      </div>
+      <div class="form-group">
+        <label for="Breed">Breed:</label>
+        <input type="text" id="breedInput" name="breed" [(ngModel)]="data.breed" required>
+      </div>
+      <div class="form-group">
+        <label for="colour">colour:</label>
+        <input type="text" id="colour" name="colour" [(ngModel)]="data.colour">
+      </div>
+      <div class="form-group">
+        <label for="PetAge">PetAge:</label>
+        <input type="text" id="PetAge" name="PetAge" [(ngModel)]="data.petAge" >
+      </div>
+      <div class="form-group">
+        <label for="About">About:</label>
+        <input type="text" id="About" name="About" [(ngModel)]="data.About" >
+      </div>
+      <button type="submit" (click)="submitForm(data)">Upload</button>
+    </form>
   </div>
 
   <!-- <main>

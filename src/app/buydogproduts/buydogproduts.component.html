@@ -1,0 +1,36 @@
+     <div class="center-container">
+
+    <div *ngIf="Data" class="card">
+      <h1 style="text-align: center;color: blue;margin-bottom: 10px; background-color: white;">TOBuyProduct</h1>
+
+      <img [src]="image + Data.imagePath" alt="Product Image" accept="image/*">
+
+      <div class="content">
+        <div class="input-group">
+          <label class="label" for="price">Price:</label>
+          <input type="text" id="price" [(ngModel)]="Data.price" disabled>
+        </div>
+        <div class="input-group">
+          <label class="label" for="breed">Breed:</label>
+          <input type="text" id="breed" [(ngModel)]="Data.breed" disabled>
+        </div>
+        <div class="input-group">
+          <label class="label" for="address">Address:</label>
+          <input type="text" id="address" [(ngModel)]="Data.address">
+        </div>
+        <div class="input-group">
+          <label class="label" for="phoneNumber">Phone Number:</label>
+          <input type="text" id="phoneNumber" [(ngModel)]="Data.PhoneNumber">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-add-cart" (click)="addcart(Data)">AddTo Cart</button>
+        <button class="btn btn-confirm-buy" (click)="submitForm(Data)">Confirm To Buy</button>
+        <button class="btn btn-cancel" (click)="cancel()">Cancel</button>
+        <!-- <button class="btn btn-cancel" (click)="modify()">modify</button> -->
+
+      </div>
+
+    </div>
+  </div>

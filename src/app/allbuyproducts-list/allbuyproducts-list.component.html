@@ -1,0 +1,19 @@
+<h1 style="text-align: center;color: blue; background-color: aquamarine;">BuyProductDetails</h1>
+<div *ngFor="let product of result ;let a=index" class="card">
+
+  <img [src]="image+product.imagePath" alt="Product Image">
+  <div class="content">
+      <label style="color: green;">ProductNumber: {{ a + 1 }}</label><br>
+
+ <label style="color: blue;">Price :{{ product.price }}$</label>
+    <div class="input-group">
+      <label style="color: blue;"> Breed : {{ product.breed }}</label>
+
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-cancel" style="background-color: orange;" (click)="cancel()">Cancel</button>
+
+    </div>
+  </div>
+ </div>

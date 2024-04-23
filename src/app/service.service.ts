@@ -28,7 +28,31 @@ export class ServiceService {
     return this.http.post(url, data);
   }
   getdog() {
-    let url = 'http://localhost:4050/api/v1/user/getallDog';
+    let url = 'http://localhost:4050/api/v1/user/getallDog/';
     return this.http.post(url,'data');
   }
+  getsinglerecord(id:any){
+    let url = `http://localhost:4050/api/v1/user/singlerecord/${id}`;
+    console.log(id,'id=====================')
+
+    return this.http.post(url,id);
+
+  }
+  Buyproduct(data:any){
+    let url = 'http://localhost:4050/api/v1/user/buyProduct/';
+    return this.http.post(url,data);
+  }
+  addcart(data:any){
+    let url = 'http://localhost:4050/api/v1/user/addCartProducts/';
+    return this.http.post(url,data);
+  }
+  allBuyproductslist(){
+    let url = 'http://localhost:4050/api/v1/user/allbuyProductdetails/';
+    return this.http.post(url,"data");
+  }
+  alladdcartproductslist(){
+    let url = 'http://localhost:4050/api/v1/user/alladdcartdetails/';
+    return this.http.post(url,'data');
+  }
+
 }

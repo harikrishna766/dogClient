@@ -4,8 +4,11 @@
       <div class="navbar-container">
           <div class="logo">Paws Partner</div>
       </div>
-      <div class="nav-links">
-          <a routerLink="/Accessories">Accessories</a>
+      <div class="nav-links" style="cursor: pointer;">
+          <a (click)="Accessories()">Accessories</a>
+          <a (click)="navigateToBuyProductsList()">BuyProductsList</a>
+          <a (click)="navigateTocartDetails()">cartDetails</a>
+
          <a (click)="navigateTobuydog()">Buy Dog</a>
           <a (click)="navigateToAdddog()">Add Dog</a>
           <a routerLink="/bites">Barky Bites</a>
@@ -29,15 +32,37 @@
     </div>
   </div>
 </div> -->
-<div *ngFor="let product of result" class="card">
+<h1 style="text-align: center;color: blue; background-color: aquamarine;">AllProducts</h1>
+<div *ngFor="let product of result ; let a=index" class="card">
   <img [src]="image+product.imagePath" alt="Product Image">
   <div class="content">
-    <label style="color: red;">Price :
-      {{ product.price }}$</label><br>
-    <label style="color: red;"> Breed : {{ product.breed }}</label>
+    <h2>ProductItem:{{a+1}}</h2>
+
+    <div class="input-group">
+      <label class="label" for="price">Price:</label>
+      <input type="text" id="price" [(ngModel)]="product.price" disabled>
+    </div>
+    <div class="input-group">
+      <label class="label" for="breed">Breed:</label>
+      <input type="text" id="breed" [(ngModel)]="product.breed" disabled>
+    </div>
+    <div class="input-group">
+      <label class="label" for="breed">colour:</label>
+      <input type="text" id="breed" [(ngModel)]="product.colour" disabled>
+    </div>
+    <div class="input-group">
+      <label class="label" for="PetAge">Breed:</label>
+      <input type="text" id="breed" [(ngModel)]="product.petAge" disabled>
+    </div>
+    <div class="input-group">
+      <label class="label" for="breed">About:</label>
+      <input type="text" id="breed" [(ngModel)]="product.About" disabled>
+    </div>
     <div class="buttons">
-      <button class="add-to-cart">Add to Cart</button>
-      <button class="buy-now">Buy Now</button>
+      <button class="btn-add-cart" (click)="onsubmitaddcart(product)">Add to Cart</button>
+      <button class="btn-confirm-buy" (click)="navigateeTobuydog(product._id)">Buy Now</button>
+      <!-- <button class="btn-modify" (click)="navigateeToModify()">ModifyFields</button> -->
+
     </div>
   </div>
  </div>

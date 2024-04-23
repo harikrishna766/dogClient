@@ -25,4 +25,8 @@ navigateToAdddog(){
   this.router.navigate(['/dashboard/adddog']);
 
 }
+Accessories(){
+  this.router.navigate(['/dashboard/accessories']);
+
+}
 }

@@ -15,6 +15,7 @@ export class NewaddComponent implements OnInit {
   constructor(private router: Router,private service:ServiceService) { }
 
   ngOnInit(): void {
+
   }
 
 logout(){
@@ -36,14 +37,20 @@ this.selectedfile=event.target.files[0] as File
 }
 
 submitForm(data:any){
-  console.log(data)
 if(this.selectedfile){
   const formdata=new FormData()
   formdata.append('image',this.selectedfile)
   formdata.append('user',JSON.stringify(data))
 
 this.service.addDog(formdata).subscribe((result:any)=>{
-if(result.status==200){
+ if(result.status==400){
+  Swal.fire({
+    text:"please Enter Details all fields",
+    icon: 'error',
+    showCancelButton: true
+   });
+  }
+  else if(result.status==200){
   Swal.fire({
     title: "Good job!",
     text: "Add New Dogs Details Successfully!",
@@ -52,8 +59,14 @@ if(result.status==200){
   this.data = {};
 
 }
+
+
 })
 }
+}
+Accessories(){
+  this.router.navigate(['/dashboard/accessories']);
+
 }
 }
 

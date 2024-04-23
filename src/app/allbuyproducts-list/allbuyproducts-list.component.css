@@ -1,0 +1,75 @@
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  float: left;
+}
+
+/* Card Image */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card .content {
+  padding: 20px;
+}
+
+.card .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card .buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card .buttons .add-to-cart {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.card .buttons .buy-now {
+  background-color: #f44336;
+  color: white;
+}
+
+
+.card .buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  width: 100px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: not-allowed;
+}
+

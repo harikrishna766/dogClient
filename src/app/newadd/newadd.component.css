@@ -54,7 +54,7 @@ form {
   background-color: #f9f9f9;
 }
 
-label {
+/* label {
   display: block;
   margin-bottom: 5px;
 }
@@ -81,4 +81,62 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #0056b3;
+} */
+
+
+
+
+/* Styles for the container */
+.container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Styles for the heading */
+.heading {
+  text-align: center;
+  color: #ff6347;
+}
+
+/* Styles for form elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="file"],
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #d84315;
+}
+
